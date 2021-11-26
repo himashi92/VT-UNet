@@ -1,11 +1,11 @@
 # VT-UNet
-Code for A Volumetric Transformer for Accurate 3D Tumor Segmentation
+This repo contains the supported pytorch code and configuration files to reproduce 3D medical image segmentaion results of [VT-UNet](https://arxiv.org/pdf/2108.11154.pdf). 
 
 
 ![VT-UNet Architecture](img/vt_unet.png?raw=true)
 
 ## Environment
-Please prepare an environment with python=3.8, and then run the command "pip install -r requirements.txt" for the dependencies.
+Prepare an environment with python=3.8, and then run the command "pip install -r requirements.txt" for the dependencies.
 
 ## Data Preparation
 - For experiments we used four datasets:
