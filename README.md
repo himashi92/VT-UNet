@@ -24,6 +24,7 @@ Please prepare an environment with python=3.8, and then run the command "pip ins
       |---train.py
       |---test.py
       |---pretrained_ckpt
+      |---saved_model
       ...
     ```
 
