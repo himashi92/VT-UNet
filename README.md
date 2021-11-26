@@ -1,6 +1,9 @@
 # VT-UNet
 Code for A Volumetric Transformer for Accurate 3D Tumor Segmentation
 
+
+![VT-UNet Architecture](img/vt_unet.png?raw=true)
+
 ## Environment
 Please prepare an environment with python=3.8, and then run the command "pip install -r requirements.txt" for the dependencies.
 
