@@ -66,7 +66,7 @@ This repository makes liberal use of code from [open_brats2020](https://github.c
       eprint={2111.13300},
       archivePrefix={arXiv},
       primaryClass={eess.IV}
-}
+    }
 ```
 
 
