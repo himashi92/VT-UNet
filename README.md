@@ -1,5 +1,5 @@
 # VT-UNet
-This repo contains the supported pytorch code and configuration files to reproduce 3D medical image segmentaion results of [VT-UNet](https://arxiv.org/pdf/2108.11154.pdf). 
+This repo contains the supported pytorch code and configuration files to reproduce 3D medical image segmentaion results of [VT-UNet](https://arxiv.org/pdf/2111.13300.pdf). 
 
 
 ![VT-UNet Architecture](img/vt_unet.png?raw=true)
