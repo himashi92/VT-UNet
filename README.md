@@ -1,4 +1,4 @@
-# Improved version of the code base for VT-UNet will be released soon !!
+## Improved version of the code base for VT-UNet will be released soon !!
 
 # VT-UNet
 This repo contains the supported pytorch code and configuration files to reproduce 3D medical image segmentaion results of [VT-UNet](https://arxiv.org/pdf/2111.13300.pdf). 
