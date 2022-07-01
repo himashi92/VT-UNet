@@ -28,9 +28,9 @@ Add it under pretrained_ckpt folder.
 
 vi ~/.bashrc
 
-export vtunet_raw_data_base="/home/VTUNet/DATASET/vtunet_raw/vtunet_raw_data"
-export vtunet_preprocessed="/home/VTUNet/DATASET/vtunet_preprocessed"
-export RESULTS_FOLDER_VTUNET="/home/VTUNet/DATASET/vtunet_trained_models"
+- export vtunet_raw_data_base="/home/VTUNet/DATASET/vtunet_raw/vtunet_raw_data"
+- export vtunet_preprocessed="/home/VTUNet/DATASET/vtunet_preprocessed"
+- export RESULTS_FOLDER_VTUNET="/home/VTUNet/DATASET/vtunet_trained_models"
 
 source ~/.bashrc
 
