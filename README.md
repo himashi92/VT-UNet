@@ -21,8 +21,8 @@ This software was originally designed and run on a system running Ubuntu.
 
 ## Pre-trained weights
 
-Download swin-T pretrained weights : https://github.com/SwinTransformer/storage/releases/download/v1.0.8/swin_tiny_patch4_window7_224_22k.pth
-Add it under pretrained_ckpt folder.
+- Download swin-T pretrained weights : https://github.com/SwinTransformer/storage/releases/download/v1.0.8/swin_tiny_patch4_window7_224_22k.pth
+- Add it under pretrained_ckpt folder.
 
 ## Create Environment variables
 
@@ -51,21 +51,21 @@ Install other dependencies
 cd VTUNet
 pip install -e .
 
-vtunet_convert_decathlon_task -i ./DATASET/vtunet_raw/vtunet_raw_data/Task03_tumor
-vtunet_convert_decathlon_task -i /home/VTUNet/DATASET/vtunet_raw/vtunet_raw_data/Task03_tumor
-vtunet_plan_and_preprocess -t 3
+- vtunet_convert_decathlon_task -i ./DATASET/vtunet_raw/vtunet_raw_data/Task03_tumor
+- vtunet_convert_decathlon_task -i /home/VTUNet/DATASET/vtunet_raw/vtunet_raw_data/Task03_tumor
+- vtunet_plan_and_preprocess -t 3
 
 ## Train Model
 
 cd vtunet
-CUDA_VISIBLE_DEVICES=0 nohup vtunet_train 3d_fullres vtunetTrainerV2_vtunet_tumor 3 0 &> small.out &
-CUDA_VISIBLE_DEVICES=0 nohup vtunet_train 3d_fullres vtunetTrainerV2_vtunet_tumor_base 3 0 &> base.out &
+- CUDA_VISIBLE_DEVICES=0 nohup vtunet_train 3d_fullres vtunetTrainerV2_vtunet_tumor 3 0 &> small.out &
+- CUDA_VISIBLE_DEVICES=0 nohup vtunet_train 3d_fullres vtunetTrainerV2_vtunet_tumor_base 3 0 &> base.out &
 
 ## Test Model
 
 cd /home/VTUNet/DATASET/vtunet_raw/vtunet_raw_data/vtunet_raw_data/Task003_tumor/
-CUDA_VISIBLE_DEVICES=0 vtunet_predict -i imagesTs -o inferTs/vtunet_tumor -m 3d_fullres -t 3 -f 0 -chk model_best -tr vtunetTrainerV2_vtunet_tumor  
-python vtunet/inference_tumor.py vtunet_tumor
+- CUDA_VISIBLE_DEVICES=0 vtunet_predict -i imagesTs -o inferTs/vtunet_tumor -m 3d_fullres -t 3 -f 0 -chk model_best -tr vtunetTrainerV2_vtunet_tumor  
+- python vtunet/inference_tumor.py vtunet_tumor
 
 ## Acknowledgements
 
