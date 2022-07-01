@@ -62,3 +62,21 @@ CUDA_VISIBLE_DEVICES=0 nohup vtunet_train 3d_fullres vtunetTrainerV2_vtunet_tumo
 cd /home/VTUNet/DATASET/vtunet_raw/vtunet_raw_data/vtunet_raw_data/Task003_tumor/
 CUDA_VISIBLE_DEVICES=0 vtunet_predict -i imagesTs -o inferTs/vtunet_tumor -m 3d_fullres -t 3 -f 0 -chk model_best -tr vtunetTrainerV2_vtunet_tumor  
 python vtunet/inference_tumor.py vtunet_tumor
+
+## Acknowledgements
+This repository makes liberal use of code from [open_brats2020](https://github.com/lescientifik/open_brats2020), [Swin Transformer](https://github.com/microsoft/Swin-Transformer), [Video Swin Transformer](https://github.com/SwinTransformer/Video-Swin-Transformer) and [Swin-Unet](https://github.com/HuCaoFighting/Swin-Unet), [nnUNet](https://github.com/MIC-DKFZ/nnUNet), [nnFormer](https://github.com/282857341/nnFormer)
+
+## References
+* [Medical segmentation decathlon](http://medicaldecathlon.com/)
+
+## Citing VT-UNet
+```bash
+    @misc{peiris2021volumetric,
+      title={A Volumetric Transformer for Accurate 3D Tumor Segmentation}, 
+      author={Himashi Peiris and Munawar Hayat and Zhaolin Chen and Gary Egan and Mehrtash Harandi},
+      year={2021},
+      eprint={2111.13300},
+      archivePrefix={arXiv},
+      primaryClass={eess.IV}
+    }
+```
