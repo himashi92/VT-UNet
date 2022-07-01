@@ -68,9 +68,11 @@ CUDA_VISIBLE_DEVICES=0 vtunet_predict -i imagesTs -o inferTs/vtunet_tumor -m 3d_
 python vtunet/inference_tumor.py vtunet_tumor
 
 ## Acknowledgements
-This repository makes liberal use of code from [open_brats2020](https://github.com/lescientifik/open_brats2020), [Swin Transformer](https://github.com/microsoft/Swin-Transformer), [Video Swin Transformer](https://github.com/SwinTransformer/Video-Swin-Transformer) and [Swin-Unet](https://github.com/HuCaoFighting/Swin-Unet), [nnUNet](https://github.com/MIC-DKFZ/nnUNet), [nnFormer](https://github.com/282857341/nnFormer)
+
+This repository makes liberal use of code from [open_brats2020](https://github.com/lescientifik/open_brats2020), [Swin Transformer](https://github.com/microsoft/Swin-Transformer), [Video Swin Transformer](https://github.com/SwinTransformer/Video-Swin-Transformer), [Swin-Unet](https://github.com/HuCaoFighting/Swin-Unet), [nnUNet](https://github.com/MIC-DKFZ/nnUNet) and [nnFormer](https://github.com/282857341/nnFormer)
 
 ## References
+
 * [Medical segmentation decathlon](http://medicaldecathlon.com/)
 
 ## Citing VT-UNet
