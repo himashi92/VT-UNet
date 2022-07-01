@@ -51,7 +51,6 @@ Install other dependencies
 cd VTUNet
 pip install -e .
 
-- vtunet_convert_decathlon_task -i ./DATASET/vtunet_raw/vtunet_raw_data/Task03_tumor
 - vtunet_convert_decathlon_task -i /home/VTUNet/DATASET/vtunet_raw/vtunet_raw_data/Task03_tumor
 - vtunet_plan_and_preprocess -t 3
 
