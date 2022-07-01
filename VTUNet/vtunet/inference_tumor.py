@@ -42,8 +42,8 @@ def process_label(label):
 
 
 def test():
-    path = '/mnt/data/SegmentationDatasets/VTUNet/DATASET/vtunet_raw/vtunet_raw_data/vtunet_raw_data/Task003_tumor/'
-    inferts_path = '/mnt/data/SegmentationDatasets/VTUNet/DATASET/vtunet_raw/vtunet_raw_data/vtunet_raw_data/Task003_tumor/inferTs/vtunet_tumor'
+    path = '/home/VTUNet/DATASET/vtunet_raw/vtunet_raw_data/vtunet_raw_data/Task003_tumor/'
+    inferts_path = '/home/VTUNet/DATASET/vtunet_raw/vtunet_raw_data/vtunet_raw_data/Task003_tumor/inferTs/vtunet_tumor'
 
     infer_files = os.listdir(inferts_path)
     print(f"Inference files loading success...{infer_files}")

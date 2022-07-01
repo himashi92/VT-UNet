@@ -2,7 +2,7 @@ MODEL:
   TYPE: swin
   NAME: swin_tiny_patch4_window7_224_22k
   DROP_PATH_RATE: 0.2
-  PRETRAIN_CKPT: "/srv/home/epei0001/miccai22/VTUNet/vtunet/pretrained_ckpt/swin_tiny_patch4_window7_224_22k.pth"
+  PRETRAIN_CKPT: "/home/VTUNet/vtunet/pretrained_ckpt/swin_tiny_patch4_window7_224_22k.pth"
   SWIN:
     FINAL_UPSAMPLE: "expand_first"
     EMBED_DIM: 48

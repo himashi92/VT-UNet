@@ -128,7 +128,7 @@ class vtunetTrainerV2_vtunet_tumor_base(vtunetTrainer):
         Known issue: forgot to set neg_slope=0 in InitWeights_He; should not make a difference though
         :return:
         """
-        cfg = "/srv/home/epei0001/miccai22/VTUNet/vtunet/configs/vt_unet_base.yaml"
+        cfg = "/home/VTUNet/vtunet/configs/vt_unet_base.yaml"
         with open(cfg, 'r') as f:
             yaml_cfg = yaml.load(f, Loader=yaml.FullLoader)
 
@@ -143,11 +143,6 @@ class vtunetTrainerV2_vtunet_tumor_base(vtunetTrainer):
 
         self.network.inference_apply_nonlin = softmax_helper
 
-    # def initialize_optimizer_and_scheduler(self):
-    #     assert self.network is not None, "self.initialize_network must be called first"
-    #     self.optimizer = torch.optim.SGD(self.network.parameters(), self.initial_lr, weight_decay=self.weight_decay,
-    #                                      momentum=0.99, nesterov=True)
-    #     self.lr_scheduler = None
 
     def initialize_optimizer_and_scheduler(self):
         assert self.network is not None, "self.initialize_network must be called first"
