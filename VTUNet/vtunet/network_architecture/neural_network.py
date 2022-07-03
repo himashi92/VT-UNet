@@ -206,20 +206,6 @@ class SegmentationNetwork(NeuralNetwork):
 
         assert patch_size is not None, "patch_size cannot be None for tiled prediction"
 
-        # data artefacts himashi
-        # print("TORCHIO ARTEFACTS")
-        # motion = tio.RandomMotion()
-        # spike = tio.RandomSpike()
-        # ghost = tio.RandomGhosting()
-        # artefact = ghost
-        # x = torch.from_numpy(x)
-        # add_motion_mod_1 = artefact(x[0].unsqueeze(dim=0)).squeeze(0).numpy()
-        # add_motion_mod_2 = artefact(x[1].unsqueeze(dim=0)).squeeze(0).numpy()
-        # add_motion_mod_3 = artefact(x[2].unsqueeze(dim=0)).squeeze(0).numpy()
-        # add_motion_mod_4 = artefact(x[3].unsqueeze(dim=0)).squeeze(0).numpy()
-        #
-        # x = np.stack([add_motion_mod_1, add_motion_mod_2, add_motion_mod_3, add_motion_mod_4])
-
         # for sliding window inference the image must at least be as large as the patch size. It does not matter
         # whether the shape is divisible by 2**num_pool as long as the patch size is
         data, slicer = pad_nd_image(x, patch_size, pad_border_mode, pad_kwargs, True, None)
