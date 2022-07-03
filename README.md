@@ -67,6 +67,10 @@ cd /home/VTUNet/DATASET/vtunet_raw/vtunet_raw_data/vtunet_raw_data/Task003_tumor
 - CUDA_VISIBLE_DEVICES=0 vtunet_predict -i imagesTs -o inferTs/vtunet_tumor -m 3d_fullres -t 3 -f 0 -chk model_best -tr vtunetTrainerV2_vtunet_tumor  
 - python vtunet/inference_tumor.py vtunet_tumor
 
+## Trained model Weights
+- VT-UNet-S (To be updated)
+- VT-UNet-B (To be updated)
+
 ## Acknowledgements
 
 This repository makes liberal use of code from [open_brats2020](https://github.com/lescientifik/open_brats2020), [Swin Transformer](https://github.com/microsoft/Swin-Transformer), [Video Swin Transformer](https://github.com/SwinTransformer/Video-Swin-Transformer), [Swin-Unet](https://github.com/HuCaoFighting/Swin-Unet), [nnUNet](https://github.com/MIC-DKFZ/nnUNet) and [nnFormer](https://github.com/282857341/nnFormer)
