@@ -5,7 +5,7 @@ This repo contains the supported pytorch code and configuration files to reprodu
 
 Our previous Code for A Volumetric Transformer for Accurate 3D Tumor Segmentation can be found iside version 1 folder.
 
-# VT-UNet: A Robust Volumetric Transformer for Medical Image Segmentation
+# VT-UNet: A Robust Volumetric Transformer for Accurate 3D Tumor Segmentation
 
 Parts of codes are borrowed from [nn-UNet](https://github.com/MIC-DKFZ/nnUNet).
 
