@@ -68,7 +68,7 @@ cd /home/VTUNet/DATASET/vtunet_raw/vtunet_raw_data/vtunet_raw_data/Task003_tumor
 - python vtunet/inference_tumor.py vtunet_tumor
 
 ## Trained model Weights
-- VT-UNet-S (To be updated)
+- [VT-UNet-S](https://drive.google.com/drive/folders/1t7RTwHNwAqh2fiIqUpFTGTG0FHY8k3pQ?usp=sharing) - (fold 0 only)
 - VT-UNet-B (To be updated)
 
 ## Acknowledgements
