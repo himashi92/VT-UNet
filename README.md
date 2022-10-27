@@ -81,12 +81,12 @@ This repository makes liberal use of code from [open_brats2020](https://github.c
 
 ## Citing VT-UNet
 ```bash
-    @misc{peiris2021volumetric,
-      title={A Volumetric Transformer for Accurate 3D Tumor Segmentation}, 
-      author={Himashi Peiris and Munawar Hayat and Zhaolin Chen and Gary Egan and Mehrtash Harandi},
-      year={2021},
-      eprint={2111.13300},
-      archivePrefix={arXiv},
-      primaryClass={eess.IV}
+    @inproceedings{peiris2022robust,
+      title={A Robust Volumetric Transformer for Accurate 3D Tumor Segmentation},
+      author={Peiris, Himashi and Hayat, Munawar and Chen, Zhaolin and Egan, Gary and Harandi, Mehrtash},
+      booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+      pages={162--172},
+      year={2022},
+      organization={Springer}
     }
 ```
