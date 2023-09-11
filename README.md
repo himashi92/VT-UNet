@@ -26,46 +26,46 @@ This software was originally designed and run on a system running Ubuntu.
 
 ## Create Environment variables
 
-vi ~/.bashrc
+`vi ~/.bashrc`
 
-- export vtunet_raw_data_base="/home/VTUNet/DATASET/vtunet_raw/vtunet_raw_data"
-- export vtunet_preprocessed="/home/VTUNet/DATASET/vtunet_preprocessed"
-- export RESULTS_FOLDER_VTUNET="/home/VTUNet/DATASET/vtunet_trained_models"
+- `export vtunet_raw_data_base="/home/VTUNet/DATASET/vtunet_raw/vtunet_raw_data"`
+- `export vtunet_preprocessed="/home/VTUNet/DATASET/vtunet_preprocessed"`
+- `export RESULTS_FOLDER_VTUNET="/home/VTUNet/DATASET/vtunet_trained_models"`
 
-source ~/.bashrc
+`source ~/.bashrc`
 
 ## Environment setup
 
 Create a virtual environment 
-- virtualenv -p /usr/bin/python3.8 venv
-- source venv/bin/activate
+- `virtualenv -p /usr/bin/python3.8 venv`
+- `source venv/bin/activate`
 
 Install torch
-- pip3 install torch==1.10.2+cu113 torchvision==0.11.3+cu113 torchaudio==0.10.2+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html
+- `pip3 install torch==1.10.2+cu113 torchvision==0.11.3+cu113 torchaudio==0.10.2+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html`
 
 Install other dependencies
-- pip install -r requirements.txt
+- `pip install -r requirements.txt`
 
 ## Preprocess Data
 
-cd VTUNet
+`cd VTUNet`
 
-pip install -e .
+`pip install -e .`
 
-- vtunet_convert_decathlon_task -i /home/VTUNet/DATASET/vtunet_raw/vtunet_raw_data/Task03_tumor
-- vtunet_plan_and_preprocess -t 3
+- `vtunet_convert_decathlon_task -i /home/VTUNet/DATASET/vtunet_raw/vtunet_raw_data/Task03_tumor`
+- `vtunet_plan_and_preprocess -t 3`
 
 ## Train Model
 
-cd vtunet
-- CUDA_VISIBLE_DEVICES=0 nohup vtunet_train 3d_fullres vtunetTrainerV2_vtunet_tumor 3 0 &> small.out &
-- CUDA_VISIBLE_DEVICES=0 nohup vtunet_train 3d_fullres vtunetTrainerV2_vtunet_tumor_base 3 0 &> base.out &
+`cd vtunet`
+- `CUDA_VISIBLE_DEVICES=0 nohup vtunet_train 3d_fullres vtunetTrainerV2_vtunet_tumor 3 0 &> small.out &`
+- `CUDA_VISIBLE_DEVICES=0 nohup vtunet_train 3d_fullres vtunetTrainerV2_vtunet_tumor_base 3 0 &> base.out &`
 
 ## Test Model
 
-cd /home/VTUNet/DATASET/vtunet_raw/vtunet_raw_data/vtunet_raw_data/Task003_tumor/
-- CUDA_VISIBLE_DEVICES=0 vtunet_predict -i imagesTs -o inferTs/vtunet_tumor -m 3d_fullres -t 3 -f 0 -chk model_best -tr vtunetTrainerV2_vtunet_tumor  
-- python vtunet/inference_tumor.py vtunet_tumor
+`cd /home/VTUNet/DATASET/vtunet_raw/vtunet_raw_data/vtunet_raw_data/Task003_tumor/`
+- `CUDA_VISIBLE_DEVICES=0 vtunet_predict -i imagesTs -o inferTs/vtunet_tumor -m 3d_fullres -t 3 -f 0 -chk model_best -tr vtunetTrainerV2_vtunet_tumor`  
+- `python vtunet/inference_tumor.py vtunet_tumor`
 
 ## Trained model Weights
 - [VT-UNet-S](https://drive.google.com/drive/folders/1t7RTwHNwAqh2fiIqUpFTGTG0FHY8k3pQ?usp=sharing) - (fold 0 only)
